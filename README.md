@@ -1,6 +1,6 @@
 # TrailFeathers
 
-Trail Feathers is an app for hiking and bird watching anywhere in the world! Use it to explore hiking and biking trails, organize lists of items to bring with you, and search for any North American bird.
+Trail Feathers is an app for hiking and bird watching anywhere in North America! Use it to find hiking and biking trails, organize lists of items to bring with you, and check the weather for your trip. Read and leave reviews of the trails to elevate your travel experience.
 
 # Team ACE
 
@@ -8,30 +8,40 @@ Product Owner:
 Scrum Master: Caity Opelka
 Development Team: Rodolfo Machirica, Rene Mercadel, John Dyer, Santo Lococo, Murphy Fleenor
 
+# Team Kitty Scripters
+
+Product Owner:
+Scrum Master: Caity Opelka
+Development Team: Daniel Jaen, Alec Vierbuchen, Gretchen Neuenhaus, Alex Beasley, Stephen Nelson
+
 ## Application Walk Through
 
-The idea is to have one stop shop for all your hiking needs, with a focus on Louisiana.
+The idea is to have one stop shop for all your hiking needs, with a focus on North America.
 
-When a user opens the application they will be brought to the login page where they will be redirected to google to login.
+When a user opens the application they will be brought to the login page where they can sign in with Google.
 
-Located at the top left of every page is a navigation burger menu which contains {x} options that will quickly navigate the user to various features of the application. From left to right are the ...
+Located at the top of every page is a navigation bar which contains 7 options that will quickly navigate the user to the features of the application. From left to right are the ...
+
+Bike Trails
+Search for bike trails anywhere in the world using your current location by address or by latitude and longitude.
+
+Weather
+Search for weather forecasts anywhere in the world using the region name (city, national landmark), and save forecast to user created trips.
 
 Quartermaster
 Allows user to create packing lists with just a name of the list and a description, after which the list is displayed on the page.
 User can click on a given list which will open a new view; and there, the user can add items that they want for that trip/packing list.
 
-Trail Feathers
-Trail Feathers is an app for hiking and bird watching anywhere in the world! Use it to explore hiking and biking trails, organize lists of items
-to bring with you, and search for any North American bird.
-
-Search Trails is a feature for searching by latitude and longitude for hiking trails all over the world. It utilizes an external api form rapidAPI.
-
-Setup Photo upload - using cloudinary a user can take and upload photos on to their own profile or trail profiles.
-
-Packing List
-
 Birding Check List
 A searchable checklist of all the bird in Louisiana (according to eBird a Cornell run Bird Data API). This includes the bird's common name, scientific name, common family name, and common scientific name. Users can check any bird they have spotted along there journey to keep along the trail.
+
+User Profile
+
+
+Hiking Trails
+
+Logout
+
 
 ## Tech
 
