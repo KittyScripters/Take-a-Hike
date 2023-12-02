@@ -2,11 +2,6 @@
 
 Trail Feathers is an app for hiking and bird watching anywhere in North America! Use it to find hiking and biking trails, organize lists of items to bring with you, and check the weather for your trip. Read and leave reviews of the trails to elevate your travel experience.
 
-# Team ACE
-
-Product Owner:
-Scrum Master: Caity Opelka
-Development Team: Rodolfo Machirica, Rene Mercadel, John Dyer, Santo Lococo, Murphy Fleenor
 
 # Team Kitty Scripters
 
@@ -43,35 +38,33 @@ Hiking Trails
 Logout
 
 
-## Tech
+## Tech Stack
 
-1. Cloudinary - Image hosting library
-2. React-Router - Router library
-3. Mysql - Database
-4. Sequelize - ORM
-5. React - Framework
-6. Axios - http Client
-7. Javascript
-8. Node.js - Runtime Environment
-9. Express - Server
-10. Bulma - CSS Library
-11. eslint - Linter
-12. Webpack - Module Bundler
-13. Passport/Google OAuth - Authentication
-14. AWS EC2 - Deployment
-15. Ebird - Bird data API
-16. TrailApi - hiking trail data
-17. MaterialUI - styling
 
-### database:
+1. React-Router - Router library
+2. Mysql - Database
+3. Sequelize - ORM
+4. React - Framework
+5. Axios - http Client
+6. Javascript
+7. Node.js - Runtime Environment
+8. Express - Server
+9. Bulma - CSS Library
+10. eslint - Linter
+11. Webpack - Module Bundler
+12. Passport/Google OAuth - Authentication
+13. AWS EC2 - Deployment
+14. MaterialUI - styling
+
+### Database:
 
 We have a mySQL/Sequelize database. We have all of our models located in database/models.
 
-### server:
+### Server:
 
 We have an express server. It is set up in server/index.js. All routes, with the exception of the birdSighting and BirdList routes, are stored in server/index.js. The bird routes are stored in server/routes.
 
-### authentication
+### Authentication
 
 Our authentication is handled with oauth and passport. Our passport and google strategy setup can be found in server/middleware/auth.js. Once logged in, the user has access to the whole site.
 
@@ -79,16 +72,28 @@ Our authentication is handled with oauth and passport. Our passport and google s
 
 We used 3 external apis for this project:
 
-1. RapidAPI - Trail API - https://rapidapi.com/trailapi/api/trailapi/
+1. [RapidAPI/Trail API - ](https://rapidapi.com/trailapi/api/trailapi/)
    This API allows us to search for any trails in the world based on latitude and longitude. It requires an API key and registration through RapidAPI, but both are free.
 
-2. Cloudinary API - https://cloudinary.com/documentation/image_upload_api_reference
-   This api allows users to upload photos onto their profiles and on trail profiles. It requires credentials, but the entire setup is free for what we've used in this project.
-
-3. BirdSightings API - https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest
+2. [BirdSightings API](https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest) - 
    This api allows users to search for any bird species and receive data about that specific bird. It is maintained by Cornell University and is free.
 
-### front-end
+3. [Weather API](https://www.weatherapi.com/api-explorer.aspx) - 
+   This api allows users to search for any location and receive weather data about that location. It is free.
+
+4. [Google Maps](https://developers.google.com/maps/documentation/javascript/overview) - 
+   This api allows users to search for any location.
+
+5. [National Parks Api](https://www.nps.gov/subjects/developer/get-started.htm) - 
+   This api allows users to search for any national park in the United States. (We are currently only storing data for national parks that have trails included, and manually adding them to our database.)
+
+6. [Bird Sounds API](https://www.xeno-canto.org/explore/api) - 
+   This api allows users to search for any bird species and receive data about that specific bird. It is maintained by Cornell University and is free.
+
+7. [Wikipedia API](https://www.mediawiki.org/wiki/API:Main_page) - 
+   This api allows users to search for any bird species and receive data about that specific bird.
+
+### Front-end
 
 The front-end was built using React and React Router. In App.jsx we initialize our trail data so that upon refresh of trail profile, the most recent trail data is rendered. In that same file we route our links and routes for the app.
 
@@ -96,31 +101,43 @@ The HashRouter can be found in client/index.jsx
 
 The styling is found in login.css and main.css.
 
-Dev Setup:
+# Dev Setup:
 
 ## Environment Variables Needed
 
-(for oauth)
+### For Google OAuth
 
-1. GOOGLE_CLIENT_ID=
-2. GOOGLE_CLIENT_SECRET=
+    1. GOOGLE_CLIENT_ID=
+    2. GOOGLE_CLIENT_SECRET=
 
-(for photo upload) 3. CLOUDINARY_URL= 4. CLOUDINARY_NAME= 5. CLOUDINARY_API_KEY= 6. CLOUDINARY_API_SECRET=
+### Trail API
 
-(for hiking trail data) 8. X-RapidApi Key= 9. X-RapidAPI-Host=
+    1. TRAIL_API_KEY=
 
-## Google OAuth
+### Weather API
+   
+      1. WEATHER_API_KEY=
 
-Google Oauth requires a google cloud account. First create your account and then navigate to the developer console. Go to google API and create a clientID and clientSecret. This goes inside the .env file.
+### Bird Sightings API
+
+    1. BIRD_SIGHTINGS_API_KEY=
+
+### National Parks API
+         
+      1. NATIONAL_PARKS_API_KEY=
+
+### Hiking/Biking Trails API
+
+      1. HIKING_TRAILS_API_KEY=
 
 ## Installation/Start-up
 
-1. First fork the repo and clone it to your local machine.
-2. Collect all env keys
-3. Run 'npm install' to install all dependencies
-4. Open mysql, create and use a database called 'TakeAHike'
-5. Run 'npm run dev' to start Webpack
-6. Run 'npm start' to run the server
+   1. First fork the repo and clone it to your local machine.
+   2. Collect all env keys
+   3. Run 'npm install' to install all dependencies
+   4. Open mysql, create and use a database called 'TakeAHike'
+   5. Run 'npm run dev' to start Webpack
+   6. Run 'npm start' to run the server
 
 ### Known Bugs
 
